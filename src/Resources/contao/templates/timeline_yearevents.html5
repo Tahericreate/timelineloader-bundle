@@ -1,0 +1,20 @@
+<div class="col-lg-12">
+	<div class="event-wrapper">
+		<div class="selected-year-events">
+			<?php echo $this->selectedYearEventsHTML; ?>
+		</div>
+		<div class="loader"></div>
+	</div>
+	<div class="event-timeline">
+		<div class="event-bar">
+		<?php foreach($this->yearCollection as $yearIndex => $yearVal): ?>
+			<div class="<?php echo ($yearVal['highlight'] ? 'active' : 'inactive'); ?> event">
+				<div class="event-line">
+					<i class="fas fa-circle load-year" data-uid="<?php echo $yearIndex; ?>" data-rt="{{REQUEST_TOKEN}}"></i>
+				</div>
+				<span class="year-val load-year" data-uid="<?php echo $yearIndex; ?>" data-rt="{{REQUEST_TOKEN}}"><?php echo $yearVal['year']; ?></span>
+			</div>
+		<?php endforeach; ?>
+		</div>
+	</div>
+</div>

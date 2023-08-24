@@ -1,0 +1,8 @@
+<?php foreach($this->eventCollection as $eventIndex => $eventVal): ?>
+<div class="event-item headline-leafed">
+	<h2><span><?php echo $eventVal['headline']; ?></span></h2>
+	<div class="image-container"><img src="<?php echo \Image::get($eventVal['image'], '', '360', 'proportional'); ?>" alt="<?php echo $eventVal['headline']; ?>"/></div>
+	<div class="info-container"><?php echo $eventVal['description']; ?></div>
+	<div class="clear"></div>
+</div>
+<?php endforeach; ?>

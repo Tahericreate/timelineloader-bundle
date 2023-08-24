@@ -1,0 +1,31 @@
+{
+    "name": "tahericreate/timelineloader-bundle",
+    "type": "contao-bundle",
+    "license": "LGPL-3.0-or-later",
+    "description": "Timelineloader Bundle.",
+    "keywords": [
+		"contao",
+		"theme",
+		"website",
+		"configuration",
+		"design",
+		"ui",
+		"ux"
+	],    
+	"version": "dev-main",
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "contao/core-bundle": "^4.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tahericreate\\TimelineloaderBundle\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Tahericreate\\TimelineloaderBundle\\ContaoManager\\Plugin"
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}
